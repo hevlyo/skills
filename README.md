@@ -5,9 +5,9 @@
 > agente se comporte. Publico como referência, sem promessa de que servem para
 > você do jeito que estão. Quase todas vieram de outras pessoas, e o crédito
 > de cada uma está na tabela abaixo: se uma delas te interessar, vá ao
-> repositório original, que é mantido e está mais atualizado que a minha
-> cópia. O melhor uso disto aqui é ler, ver o que faz sentido e pedir para o
-> seu agente escrever a versão que serve ao seu caso.
+> repositório original, que é mantido pelo autor. O melhor uso disto aqui é
+> ler, ver o que faz sentido e pedir para o seu agente escrever a versão que
+> serve ao seu caso.
 
 Uso com Claude Code, Codex, Cursor e OpenCode, quase sempre por dentro do
 [T3 Code](https://github.com/pingdotgg/t3code). A fonte fica em
@@ -15,75 +15,35 @@ Uso com Claude Code, Codex, Cursor e OpenCode, quase sempre por dentro do
 rodo agentes. Cada harness tem na sua pasta `skills/` um link por skill
 apontando para essa fonte, então uma edição vale para todos.
 
+A lista é curta de propósito. Já tive o dobro disso instalado e a maior
+parte nunca foi chamada, então tirei o que não usava.
+
 ## O que tem aqui
 
 A coluna "Alterei" diz o quanto a cópia se afasta do original. "Nada"
 significa cópia fiel do upstream. A última sincronização com as origens foi
 em 24/11/2026.
 
-### Engenharia
-
 | Skill | O que faz | Origem | Alterei |
 |---|---|---|---|
-| `architect` | Desenha tipos, assinaturas e módulos antes do código | [pstack](https://github.com/cursor/plugins/tree/main/pstack) | A skill `arena` virou subagentes em paralelo |
-| `blast-radius` | Procura o que uma mudança quebra fora do diff | pstack | Ajustes de links e de skills citadas |
-| `how` | Explica como um trecho funciona antes de mexer nele | pstack | Nota para outros harnesses |
-| `why` | Levanta o porquê de uma decisão ou regressão | pstack | Só o `agents/openai.yaml` |
 | `astra-loop` | Revisão em rodadas com o GPT Astra, com limite de rodadas | [tstack](https://github.com/t3dotgg/tstack) (`sol-loop`) | Derivada: modelo revisor trocado e delegação reescrita para o T3 Code |
 | `code-review` | Revisa um diff contra os padrões do repositório e contra a spec | [mattpocock/skills](https://github.com/mattpocock/skills) | Regra de segunda rodada e de citar `arquivo:linha`; sem a chamada à skill de setup do autor |
-| `codebase-design` | Vocabulário para desenhar módulos profundos | mattpocock/skills | Só o frontmatter |
-| `diagnosing-bugs` | Roteiro de diagnóstico para bug difícil | mattpocock/skills | Só o frontmatter |
-| `domain-modeling` | Glossário e ADRs do domínio do projeto | mattpocock/skills | Só o frontmatter |
-| `grill-me` | Entrevista insistente para apertar um plano | mattpocock/skills | Texto embutido no lugar da chamada a outra skill |
-| `grill-with-docs` | A mesma entrevista, registrando ADRs e glossário | mattpocock/skills | Descrição e link |
-| `implement` | Implementa a partir de uma spec ou de tickets | mattpocock/skills | Uma linha |
 | `pr` | Escreve o corpo de um PR | mattpocock/skills, que credita [humanlayer/skills](https://github.com/humanlayer/skills) | Nada |
-| `prototype` | Protótipo descartável para responder uma dúvida de design | mattpocock/skills | Só o frontmatter |
 | `research` | Pesquisa em fontes primárias e grava o achado no repositório | mattpocock/skills | Nada |
 | `resolving-merge-conflicts` | Resolve conflito de merge ou rebase em andamento | mattpocock/skills (já removida de lá) | Nada |
-| `retro` | Retrospectiva de uma sessão de código | mattpocock/skills | Nada |
-| `tdd` | Desenvolvimento guiado por teste | mattpocock/skills | Frontmatter e um link |
 | `writing-for-agents` | Como escrever skills, `AGENTS.md` e `CLAUDE.md` | mattpocock/skills | Nada |
-
-### Interface e design
-
-| Skill | O que faz | Origem | Alterei |
-|---|---|---|---|
-| `better-interface` | Revisão única que junta todas as `better-*` | [jakubkrehel/skills](https://github.com/jakubkrehel/skills) | Links entre as skills |
-| `better-accessibility` | Teclado, foco, ARIA e formulários contra a WCAG 2.2 | jakubkrehel/skills | Só o frontmatter |
-| `better-colors` | Paleta, tokens semânticos e contraste | jakubkrehel/skills | Só o frontmatter |
-| `better-layout` | Agrupamento, alinhamento e estrutura responsiva | jakubkrehel/skills | Só o frontmatter |
-| `better-typography` | Escala, espaçamento, quebra e pontuação do texto | jakubkrehel/skills | Só o frontmatter |
-| `better-ui` | Raio, alinhamento óptico, sombra e ícone | jakubkrehel/skills | Só o frontmatter |
-| `better-motion` | O que animar e com quais valores de duração, curva e distância | jakubkrehel/skills | Só o frontmatter |
-| `better-writing` | Texto de interface: rótulos, erros, estados vazios | jakubkrehel/skills | Só o frontmatter |
-| `interface-review` | Revisa o que um branch ou PR piorou na interface | jakubkrehel/skills | Nada |
-| `explain-interface` | Explica como um site ou efeito foi construído | jakubkrehel/skills | Nada |
-| `break` | Renderiza um componente em todos os cenários e força os limites | jakubkrehel/skills | Nada |
-| `variant` | Gera variantes de um componente para escolher | jakubkrehel/skills | Nada |
-| `beautiful-shadows` | Sombras em camadas com valores exatos de Tailwind | [MengTo/Skills](https://github.com/MengTo/Skills) | Só o frontmatter; sem a pasta de demonstração |
-| `emil-design-eng` | A filosofia de acabamento e animação do Emil Kowalski | [emilkowalski/skills](https://github.com/emilkowalski/skills) | Nada |
-| `frontend-design` | Direção visual para interface que não pareça modelo pronto | [anthropics/skills](https://github.com/anthropics/skills) | Nada |
-| `unslop-ui` | Tira cacoetes de IA do texto de interface e de gráficos | [felipebasurto/unslop-ui](https://github.com/felipebasurto/unslop-ui) | Nada |
-
-### Escrita, navegador e o resto
-
-| Skill | O que faz | Origem | Alterei |
-|---|---|---|---|
 | `humanizer` | Reescreve texto com cara de IA | [blader/humanizer](https://github.com/blader/humanizer) | Seção em português para mensagens enviadas em meu nome |
+| `unslop-ui` | Tira cacoetes de IA do texto de interface e de gráficos | [felipebasurto/unslop-ui](https://github.com/felipebasurto/unslop-ui) | Nada |
+| `frontend-design` | Direção visual para interface que não pareça modelo pronto | [anthropics/skills](https://github.com/anthropics/skills) | Nada |
+| `emil-design-eng` | A filosofia de acabamento e animação do Emil Kowalski | [emilkowalski/skills](https://github.com/emilkowalski/skills) | Nada |
+| `beautiful-shadows` | Sombras em camadas com valores exatos de Tailwind | [MengTo/Skills](https://github.com/MengTo/Skills) | Só o frontmatter; sem a pasta de demonstração |
 | `browser-use` | Controle direto do navegador por CDP | [browser-use](https://github.com/browser-use/browser-use) | Nada |
-| `seo-audit` | Auditoria de SEO técnico e on-page | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | Frontmatter e uma nota |
 | `find-skills` | Procura e instala skills | [vercel-labs/skills](https://github.com/vercel-labs/skills) | Só o frontmatter |
-| `obsidian-vault` | Busca e cria notas no meu vault do Obsidian | mattpocock/skills (já removida de lá) | Caminho do vault e frontmatter |
 
-"Só o frontmatter" quase sempre quer dizer `disable-model-invocation: true`:
-a skill só roda quando eu chamo pelo nome e não ocupa espaço no contexto de
-toda conversa. Em várias também acrescentei o `agents/openai.yaml`, ou a
-`policy` dele, que faz o mesmo no Codex.
-
-Alguns textos dizem que tal skill "is not installed here". Isso descreve a
-minha máquina. Da mesma forma,
-a `seo-audit` cita skills irmãs do repositório dela que eu não instalei.
+"Só o frontmatter" quer dizer `disable-model-invocation: true`: a skill só
+roda quando eu chamo pelo nome e não ocupa espaço no contexto de toda
+conversa. Nessas também acrescentei o `agents/openai.yaml`, ou a `policy`
+dele, que faz o mesmo no Codex.
 
 ## O que uso e não está aqui
 
@@ -106,6 +66,17 @@ Também ficou de fora o perfil de voz que a `humanizer` lê antes de escrever
 em meu nome. Ele cita conversas e pessoas reais. O `SKILL.md` ainda aponta
 para `voz-riquelme.md`; se for usar essa parte, escreva o seu.
 
+## O que tirei
+
+Passaram por aqui e saíram por falta de uso, não por defeito. Valem a
+visita: as skills de engenharia do
+[mattpocock/skills](https://github.com/mattpocock/skills) (`tdd`,
+`grill-me`, `diagnosing-bugs`, `codebase-design` e outras), a família
+`better-*` do [jakubkrehel/skills](https://github.com/jakubkrehel/skills),
+as do [pstack](https://github.com/cursor/plugins/tree/main/pstack)
+(`architect`, `how`, `why`, `blast-radius`) e a `seo-audit` do
+[coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills).
+
 ## Instalar
 
 Prefira o repositório original de cada skill. Se quiser mesmo a minha cópia:
@@ -116,11 +87,8 @@ cp -R skills/skills/<nome> ~/.claude/skills/   # Claude Code
 cp -R skills/skills/<nome> ~/.codex/skills/    # Codex
 ```
 
-Várias chamam outras por link relativo (`../outra-skill`). Copie também as
-que o `SKILL.md` citar: `better-interface`, por exemplo, usa todas as
-`better-*`, e `implement` usa `tdd` e `code-review`. A `astra-loop` precisa de um harness
-que rode um modelo de outro provedor como subagente; no T3 Code isso é o
-`delegate_task`.
+A `astra-loop` precisa de um harness que rode um modelo de outro provedor
+como subagente; no T3 Code isso é o `delegate_task`.
 
 ## Licença
 

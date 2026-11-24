@@ -1,5 +1,0 @@
-interface:
-  display_name: "Why"
-  short_description: "Investigate the rationale behind code"
-policy:
-  allow_implicit_invocation: false
