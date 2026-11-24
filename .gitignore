@@ -1,0 +1,16 @@
+# o repositório é público: nada de backup, mídia nem arquivo com cara de credencial
+*.bak-*
+voz-*.md
+.env*
+*.key
+__pycache__/
+node_modules/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.mp4
+*.mov
+*.pdf
+*.zip

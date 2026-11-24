@@ -1,0 +1,5 @@
+interface:
+  display_name: "Obsidian Vault"
+  short_description: "Search and manage notes in the Obsidian vault"
+policy:
+  allow_implicit_invocation: false

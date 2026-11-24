@@ -1,0 +1,5 @@
+interface:
+  display_name: "SEO Audit"
+  short_description: "Audit and diagnose SEO issues"
+policy:
+  allow_implicit_invocation: false
