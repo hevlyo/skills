@@ -30,20 +30,18 @@ em 24/11/2026.
 | `code-review` | Revisa um diff contra os padrões do repositório e contra a spec | [mattpocock/skills](https://github.com/mattpocock/skills) | Regra de segunda rodada e de citar `arquivo:linha`; sem a chamada à skill de setup do autor |
 | `pr` | Escreve o corpo de um PR | mattpocock/skills, que credita [humanlayer/skills](https://github.com/humanlayer/skills) | Nada |
 | `research` | Pesquisa em fontes primárias e grava o achado no repositório | mattpocock/skills | Nada |
-| `resolving-merge-conflicts` | Resolve conflito de merge ou rebase em andamento | mattpocock/skills (já removida de lá) | Nada |
 | `writing-for-agents` | Como escrever skills, `AGENTS.md` e `CLAUDE.md` | mattpocock/skills | Nada |
 | `humanizer` | Reescreve texto com cara de IA | [blader/humanizer](https://github.com/blader/humanizer) | Seção em português para mensagens enviadas em meu nome |
 | `unslop-ui` | Tira cacoetes de IA do texto de interface e de gráficos | [felipebasurto/unslop-ui](https://github.com/felipebasurto/unslop-ui) | Nada |
 | `frontend-design` | Direção visual para interface que não pareça modelo pronto | [anthropics/skills](https://github.com/anthropics/skills) | Nada |
 | `emil-design-eng` | A filosofia de acabamento e animação do Emil Kowalski | [emilkowalski/skills](https://github.com/emilkowalski/skills) | Nada |
-| `beautiful-shadows` | Sombras em camadas com valores exatos de Tailwind | [MengTo/Skills](https://github.com/MengTo/Skills) | Só o frontmatter; sem a pasta de demonstração |
 | `browser-use` | Controle direto do navegador por CDP | [browser-use](https://github.com/browser-use/browser-use) | Nada |
 | `find-skills` | Procura e instala skills | [vercel-labs/skills](https://github.com/vercel-labs/skills) | Só o frontmatter |
 
 "Só o frontmatter" quer dizer `disable-model-invocation: true`: a skill só
 roda quando eu chamo pelo nome e não ocupa espaço no contexto de toda
-conversa. Nessas também acrescentei o `agents/openai.yaml`, ou a `policy`
-dele, que faz o mesmo no Codex.
+conversa. Nela também acrescentei o `agents/openai.yaml`, que faz o mesmo no
+Codex.
 
 ## O que uso e não está aqui
 
@@ -55,11 +53,10 @@ material que não é meu para redistribuir. Instale direto da origem.
 |---|---|
 | `ibx` | [hevlyo/ibx](https://github.com/hevlyo/ibx), a única que escrevi do zero: empresta uma sandbox descartável do instabox para trabalho pesado ou arriscado |
 | `impeccable` | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) |
-| `stageshow` | [benjitaylor/skills](https://github.com/benjitaylor/skills) |
 | `revenue-centric-design` | [heliocosta-dev/revenue-centric-design](https://github.com/heliocosta-dev/revenue-centric-design) |
 | `shadcn` | [shadcn-ui/ui](https://github.com/shadcn-ui/ui) |
 | `supabase`, `supabase-postgres-best-practices` | [supabase/agent-skills](https://github.com/supabase/agent-skills) |
-| `vercel-composition-patterns`, `vercel-react-best-practices` | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) |
+| `vercel-react-best-practices` | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) |
 | `omarchy`, `omarchy-app`, `diagnose-crash` | vêm com o pacote do [Omarchy](https://omarchy.org) e são trocadas a cada atualização do sistema |
 
 Também ficou de fora o perfil de voz que a `humanizer` lê antes de escrever
