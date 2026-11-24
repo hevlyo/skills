@@ -12,6 +12,8 @@ From Search Console, pull query + page pairs for the trailing 28 days (compare w
 | **Weak click-through** | Position 1–5, CTR well below other pages at similar positions | Title and meta description |
 | **Near the top** | Position 4–7 on a revenue query | Content, links, and featured-snippet format |
 
+**Data caveat:** a Search Console logging error misreported impressions from May 13, 2025 until April 27, 2026, which also affected CTR and average position; clicks were not affected. Don't compare impressions, CTR, or position across April 27, 2026: compare clicks, or keep both periods on the same side of that date. (Google's Search Console data anomalies page, April 2026.)
+
 Prioritize by business value: a position-11 query that drives demos beats a position-9 glossary term with three times the impressions.
 
 Before touching a page, check for **cannibalization**: if two of your pages rank for the same query, positions often bounce between them and neither climbs. Pick one owner, merge the useful parts of the other into it, and redirect.
@@ -26,7 +28,7 @@ Open the three results above you and write down, for each one, the concrete reas
 - **Format.** They have the table, steps, or tool the query calls for.
 - **Links.** They're linked from more, and stronger, pages, inside their site and out.
 
-If you can't name a reason, don't guess with a rewrite. The gap is more likely authority than on-page, and the fix is links (the `backlink-prospecting` loop in `marketing-loops`) rather than content.
+If you can't name a reason, don't guess with a rewrite. The gap is more likely authority than on-page, and the fix is links (the **link-building** skill, run weekly as the `backlink-prospecting` loop in `marketing-loops`) rather than content.
 
 ## Make the smallest change that closes the gap
 

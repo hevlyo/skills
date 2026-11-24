@@ -18,17 +18,17 @@ apontando para essa fonte, então uma edição vale para todos.
 ## O que tem aqui
 
 A coluna "Alterei" diz o quanto a cópia se afasta do original. "Nada"
-significa cópia fiel de alguma versão do upstream, que pode não ser a mais
-recente.
+significa cópia fiel do upstream. A última sincronização com as origens foi
+em 24/11/2026.
 
 ### Engenharia
 
 | Skill | O que faz | Origem | Alterei |
 |---|---|---|---|
-| `architect` | Desenha tipos, assinaturas e módulos antes do código | [pstack](https://github.com/cursor/plugins/tree/main/pstack) | Troquei as skills `arena` e `interrogate` por subagentes |
+| `architect` | Desenha tipos, assinaturas e módulos antes do código | [pstack](https://github.com/cursor/plugins/tree/main/pstack) | A skill `arena` virou subagentes em paralelo |
 | `blast-radius` | Procura o que uma mudança quebra fora do diff | pstack | Ajustes de links e de skills citadas |
-| `how` | Explica como um trecho funciona antes de mexer nele | pstack | Caminho do arquivo de modelos e nota para outros harnesses |
-| `why` | Levanta o porquê de uma decisão ou regressão | pstack | Descoberta de MCP genérica |
+| `how` | Explica como um trecho funciona antes de mexer nele | pstack | Nota para outros harnesses |
+| `why` | Levanta o porquê de uma decisão ou regressão | pstack | Só o `agents/openai.yaml` |
 | `astra-loop` | Revisão em rodadas com o GPT Astra, com limite de rodadas | [tstack](https://github.com/t3dotgg/tstack) (`sol-loop`) | Derivada: modelo revisor trocado e delegação reescrita para o T3 Code |
 | `code-review` | Revisa um diff contra os padrões do repositório e contra a spec | [mattpocock/skills](https://github.com/mattpocock/skills) | Regra de segunda rodada e de citar `arquivo:linha`; sem a chamada à skill de setup do autor |
 | `codebase-design` | Vocabulário para desenhar módulos profundos | mattpocock/skills | Só o frontmatter |
@@ -54,7 +54,8 @@ recente.
 | `better-colors` | Paleta, tokens semânticos e contraste | jakubkrehel/skills | Só o frontmatter |
 | `better-layout` | Agrupamento, alinhamento e estrutura responsiva | jakubkrehel/skills | Só o frontmatter |
 | `better-typography` | Escala, espaçamento, quebra e pontuação do texto | jakubkrehel/skills | Só o frontmatter |
-| `better-ui` | Raio, alinhamento óptico, sombra, ícone e animação | jakubkrehel/skills | Só o frontmatter |
+| `better-ui` | Raio, alinhamento óptico, sombra e ícone | jakubkrehel/skills | Só o frontmatter |
+| `better-motion` | O que animar e com quais valores de duração, curva e distância | jakubkrehel/skills | Só o frontmatter |
 | `better-writing` | Texto de interface: rótulos, erros, estados vazios | jakubkrehel/skills | Só o frontmatter |
 | `interface-review` | Revisa o que um branch ou PR piorou na interface | jakubkrehel/skills | Nada |
 | `explain-interface` | Explica como um site ou efeito foi construído | jakubkrehel/skills | Nada |
@@ -80,8 +81,8 @@ a skill só roda quando eu chamo pelo nome e não ocupa espaço no contexto de
 toda conversa. Em várias também acrescentei o `agents/openai.yaml`, ou a
 `policy` dele, que faz o mesmo no Codex.
 
-Alguns textos dizem que tal skill "is not installed here" ou apontam para
-`~/.agents/pstack-models.md`. Isso descreve a minha máquina. Da mesma forma,
+Alguns textos dizem que tal skill "is not installed here". Isso descreve a
+minha máquina. Da mesma forma,
 a `seo-audit` cita skills irmãs do repositório dela que eu não instalei.
 
 ## O que uso e não está aqui
