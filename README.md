@@ -22,7 +22,7 @@ parte nunca foi chamada, então tirei o que não usava.
 
 A coluna "Alterei" diz o quanto a cópia se afasta do original. "Nada"
 significa cópia fiel do upstream. A última sincronização com as origens foi
-em 24/11/2026.
+em 27/11/2026.
 
 | Skill | O que faz | Origem | Alterei |
 |---|---|---|---|
